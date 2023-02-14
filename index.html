@@ -4,7 +4,7 @@
         <title>Project</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./style.css">
+        <link rel="stylesheet" href="./style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
@@ -16,12 +16,37 @@
 
         <div class="container">
 
-            <p>Make website on us senators, autogenerate page with every us senator
-
-                ... 
-                Each field will be a p tag and will be within some kind of map, auto generate according to a singular example. Or search via the api for a single senator if they exist
-            </p>
-
+            <form action="https://jsfiddle.net/api/post/library/pure/" method="post">
+                <div id="part1" class="container">
+                <h4>Include</h4>
+                <input type="checkbox" name="prehtml" id="prehtml" value="prehtml">
+                <label for="prehtml">Pre written html</label><br>
+                <input type="checkbox" name="jquery" id="jquery" value="jquery">
+                <label for="jquery">JQuery</label><br>
+                <label for="bootstrap">Bootstrap Ver.</label>
+                <select id="bootstrap4" name="bootstrap4">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select><br>
+                
+                <button onclick="part2(); return false;">Add prewritten code</button>
+            </div>
+                
+                <div id="part2" class="container">
+                    <h4>Write code: </h4>
+                    <label for="html">HTML: </label><br>
+                    <textarea rows="10" cols="50" type="text" id="html" name="html"></textarea><br><br>
+                    <label for="html">CSS: </label><br>
+                    <textarea rows="10" cols="50" type="text" id="css" name="css"></textarea><br><br>
+                    <label for="html">Javascript: </label><br>
+                    <textarea rows="10" cols="50" type="text" id="js" name="js"></textarea><br><br>
+                    <input type="submit" value="Submit" class="btn btn-danger">
+                </div>
+                
+            </form>
         </div>
 
         <script src="./script.js"></script>
