@@ -15,34 +15,36 @@
     <body>
 
         <div class="container">
-
             <form action="https://jsfiddle.net/api/post/library/pure/" method="post">
                 <div id="part1" class="container">
-                <h4>Include</h4>
-                <input type="checkbox" name="prehtml" id="prehtml" value="prehtml">
-                <label for="prehtml">Pre written html</label><br>
+                <div class="jumbotron"><h4>Include</h4><p>Choose all code pre-requisites that you want to use within your JSFiddle code. These will be processed on the next screen. The code already contains a basic Doctype html format for you. Click submit on the next screen to send off your code to be ran in JSFiddle.net</p></div>
                 <input type="checkbox" name="jquery" id="jquery" value="jquery">
                 <label for="jquery">JQuery</label><br>
+                <input type="checkbox" name="angularJS" id="angularJS" value="angularJS">
+                <label for="angularJS">AngularJS</label><br>
+                <input type="checkbox" name="W3CSS" id="W3CSS" value="W3CSS">
+                <label for="W3CSS">W3.CSS</label><br>
+                <input type="checkbox" name="W3JS" id="W3JS" value="W3JS">
+                <label for="W3JS">W3.JS</label><br>
                 <label for="bootstrap">Bootstrap Ver.</label>
-                <select id="bootstrap4" name="bootstrap4">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                <select id="bootstrap" name="bootstrap">
+                    <option value="0">N/A</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select><br>
                 
-                <button onclick="part2(); return false;">Add prewritten code</button>
+                <button class="btn btn-primary" onclick="part2(); return false;">Add prewritten code</button>
             </div>
                 
                 <div id="part2" class="container">
                     <h4>Write code: </h4>
                     <label for="html">HTML: </label><br>
-                    <textarea rows="10" cols="50" type="text" id="html" name="html"></textarea><br><br>
+                    <textarea class="form-control" rows="10" cols="100" type="text" id="html" name="html"></textarea><br><br>
                     <label for="html">CSS: </label><br>
-                    <textarea rows="10" cols="50" type="text" id="css" name="css"></textarea><br><br>
+                    <textarea class="form-control" rows="10" cols="100" type="text" id="css" name="css"></textarea><br><br>
                     <label for="html">Javascript: </label><br>
-                    <textarea rows="10" cols="50" type="text" id="js" name="js"></textarea><br><br>
+                    <textarea class="form-control" rows="10" cols="100" type="text" id="js" name="js"></textarea><br><br>
                     <input type="submit" value="Submit" class="btn btn-danger">
                 </div>
                 
